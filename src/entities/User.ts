@@ -14,6 +14,12 @@ class User {
     email: string;
 
     @Column()
+    password: string;
+
+    @Column()
+    phone_number: string;
+
+    @Column()
     admin: boolean;
 
     @CreateDateColumn()
