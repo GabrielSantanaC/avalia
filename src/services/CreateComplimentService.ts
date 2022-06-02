@@ -15,16 +15,11 @@ class CreateComplimentService {
         const complimentsRepositories = getCustomRepository(ComplimentsRepositories);
         const coursesRepositories = getCustomRepository(CoursesRepositories);
 
-        console.log("curso", course_id);
-
         const course = await coursesRepositories.findOne(course_id);
 
         if(!course) {
             throw new Error("Course does not exists!");
         }
-
-        console.log("curso", course);
-        
 
         const compliment = complimentsRepositories.create({
             user_id,
