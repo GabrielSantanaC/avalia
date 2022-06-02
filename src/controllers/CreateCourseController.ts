@@ -3,7 +3,9 @@ import { CreateCourseService } from "../services/CreateCourseService";
 
 class CreateCourseController {
     async handle(request: Request, response: Response) {
-        const { name, user_id } = request.body;
+        const { name } = request.body;
+
+        const {user_id} = request;
 
         const createCourseService = new CreateCourseService();
 
